@@ -7,7 +7,8 @@ export interface vdfInterface {
   ) => boolean;
 }
 
-export default vdf: vdfInterface = require(".");
+const vdf: vdfInterface = require(".");
+export default vdf;
 
 function testVdf() {
   const buffer = new Uint8Array(Buffer.from("hello testing"));
