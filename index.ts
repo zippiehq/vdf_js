@@ -1,4 +1,4 @@
-interface vdf {
+export interface vdfInterface {
   vdfProveWesolowski: (challenge: Uint8Array, iterations: number) => Uint8Array;
   vdfVerifyWesolowski: (
     challenge: Uint8Array,
@@ -7,7 +7,7 @@ interface vdf {
   ) => boolean;
 }
 
-const vdf: vdf = require(".");
+export default vdf: vdfInterface = require(".");
 
 function testVdf() {
   const buffer = new Uint8Array(Buffer.from("hello testing"));
@@ -34,5 +34,3 @@ function timeTest() {
   console.timeEnd("prove");
 }
 
-testVdf();
-timeTest();
